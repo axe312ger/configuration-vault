@@ -1,0 +1,16 @@
+# Working with folders
+alias ls='ls -lisah'
+alias rm='trash'
+
+# Git
+alias gs='git status'
+alias ga='git add -p'
+alias gc='git commit'
+
+# Vagrant
+alias vu='sudo echo '' && vagrant up'
+alias vh='vagrant halt'
+alias vs='vagrant ssh'
+
+# Other
+alias ip='ifconfig | grep "inet "'
