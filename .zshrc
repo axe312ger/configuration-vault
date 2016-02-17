@@ -17,12 +17,14 @@ export EDITOR='subl -w'
 ## Zsh Extensions
 ############################################################
 
-# z - cd is lame
+# z - cd is lame - https://github.com/rupa/z
 . ~/.zsh/submodules/z/z.sh
 
-# zsh autosuggestions
+# zsh autosuggestions - https://github.com/tarruda/zsh-autosuggestions
 . ~/.zsh/submodules/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# scmpuff - https://mroth.github.io/scmpuff/
+eval "$(scmpuff init -s)"
 
 ## Package Managers
 ############################################################
