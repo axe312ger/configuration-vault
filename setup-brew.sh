@@ -20,6 +20,7 @@ brew tap homebrew/services
 
 # Essentials
 brew install zsh
+brew install trash
 brew install gnu-sed --default-names
 
 # Git workflow helpers

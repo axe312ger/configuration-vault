@@ -9,6 +9,7 @@ alias gc='git commit'
 
 # Vagrant
 alias vu='sudo echo '' && vagrant up'
+# vagrant sometimes needs admin permissions. With this you can vu & get a coffee
 alias vh='vagrant halt'
 alias vs='vagrant ssh'
 
