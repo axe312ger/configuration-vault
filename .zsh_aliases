@@ -3,9 +3,9 @@ alias ls='ls -lisah'
 alias rm='trash'
 
 # Git
-alias gs='git status'
 alias ga='git add -p'
 alias gc='git commit'
+alias gr='git checkout -p --'
 
 # Vagrant
 alias vu='sudo echo '' && vagrant up'
@@ -15,3 +15,4 @@ alias vs='vagrant ssh'
 
 # Other
 alias ip='ifconfig | grep "inet "'
+alias wifi='wifi-password'

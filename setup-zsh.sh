@@ -22,4 +22,6 @@ then
   echo -e "\n\n# Custom settings should be put into the following file instead of here" >> ~/.zshrc
   echo "export CONFIG_VAULT_PATH=$CWD" >> ~/.zshrc
   echo ". \$CONFIG_VAULT_PATH/.zshrc" >> ~/.zshrc
+
+  source ~/.zshrc
 fi
