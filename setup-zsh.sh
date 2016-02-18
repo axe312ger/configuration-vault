@@ -9,11 +9,17 @@ then
 fi
 
 # Install Oh My Zsh
-echo "Installing Oh My Zsh..."
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+if [ ! -d ~/.oh-my-zsh ]
+then
+  echo "Installing Oh My Zsh..."
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
 
-# Create sym links in user directory to keep config in git and paths simple
-cd ~
-ln -s $CWD/.zsh .zsh
-ln -s $CWD/.zshrc .zshrc
-ln -s $CWD/.zsh_aliases .zsh_aliases
+# Inject our custom configuration into the default .zshrc
+if ! grep -q "export CONFIG_VAULT_PATH" ~/.zshrc
+then
+  echo "Injecting zsh config into your user .zshrc file."
+  echo -e "\n\n# Custom settings should be put into the following file instead of here" >> ~/.zshrc
+  echo "export CONFIG_VAULT_PATH=$CWD" >> ~/.zshrc
+  echo ". \$CONFIG_VAULT_PATH/.zshrc" >> ~/.zshrc
+fi
