@@ -1,0 +1,44 @@
+{
+  "label": "Brew Cask - DMG Package manager",
+  "command": "brew cask install ",
+  "description": "Homebrew Cask extends Homebrew and brings its elegance, simplicity, and speed to OS X applications and large binaries alike.",
+  "groups": [
+    {
+      "label": "Essentials",
+      "description": "You won't live without these!",
+      "planets": [
+        {
+          "id": "1password",
+          "label": "1Password",
+          "description": "Password manager #1"
+        },
+        {
+          "id": "google-chrome",
+          "label": "Google Chrome (Stable)",
+          "description": "Fastest and most modern browser out there."
+        },
+        {
+          "id": "google-chrome-beta",
+          "label": "Google Chrome (Beta)",
+          "description": "Fastest and most modern browser out there. The beta, for the magpies under you guys."
+        }
+      ]
+    },
+    {
+      "label": "Communication",
+      "description": "You gotta talk!",
+      "planets": [
+        {
+          "id": "slack",
+          "label": "Slack",
+          "description": "Do we need to talk about this?"
+        },
+        {
+          "id": "gpgtools",
+          "label": "GPG Tools",
+          "description": "You gotta encrypt, luke!"
+        }
+      ]
+    }
+  ]
+}
