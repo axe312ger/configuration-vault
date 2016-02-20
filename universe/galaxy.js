@@ -80,7 +80,7 @@ function showGalaxyPrompt (galaxy) {
     .then((groups) => {
       return groups.reduce((planets, group) => [...planets, ...group], [])
     })
-    .then((planets) => ({ galaxy, planets }))
+    .then((planets) => ({ config: galaxy, planets }))
 }
 
 module.exports = {
