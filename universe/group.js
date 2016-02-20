@@ -2,7 +2,6 @@
 
 const inquirer = require('inquirer')
 const promisify = require('es6-promisify')
-const chalk = require('chalk')
 
 const cliHelpers = require('./cli-helpers')
 const collect = require('./sequential-reduce')
@@ -12,11 +11,9 @@ const prompt = promisify(inquirer.prompt, function (result) {
   this.resolve(result)
 })
 
-const chalkGroup = cliHelpers.chalkGroup;
-const chalkPlanet = cliHelpers.chalkPlanet;
-const hr = cliHelpers.hr;
-const newLine = cliHelpers.newLine;
-const preamble = cliHelpers.preamble;
+const chalkPlanet = cliHelpers.chalkPlanet
+const newLine = cliHelpers.newLine
+const preamble = cliHelpers.preamble
 const showPlanetPrompt = planet.showPlanetPrompt
 
 function showGroupPrompt (group) {
@@ -26,9 +23,9 @@ function showGroupPrompt (group) {
   console.log('The following planets are available in this group:')
   console.log(newLine())
 
-  const planets = group.planets
+  group.planets
     .map((planet) => `* ${chalkPlanet(planet.label)}`)
-    .map((listItem) => console.log(listItem))
+    .forEach((listItem) => console.log(listItem))
 
   console.log(newLine())
 
@@ -50,8 +47,7 @@ function showGroupPrompt (group) {
       },
       {
         name: 'Install no planets of this group at all',
-        value: 'none'
-        ,
+        value: 'none',
         short: chalkPlanet('No planets at all')
       }
     ]

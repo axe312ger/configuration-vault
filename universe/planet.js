@@ -2,7 +2,6 @@
 
 const inquirer = require('inquirer')
 const promisify = require('es6-promisify')
-const chalk = require('chalk')
 
 const cliHelpers = require('./cli-helpers')
 
@@ -10,7 +9,7 @@ const prompt = promisify(inquirer.prompt, function (result) {
   this.resolve(result)
 })
 
-const preamble = cliHelpers.preamble;
+const preamble = cliHelpers.preamble
 
 function showPlanetPrompt (planet) {
   preamble('planet', planet.label, planet.description)

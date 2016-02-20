@@ -35,7 +35,7 @@ function newLine (count) {
 }
 
 function preamble (type, label, desc) {
-  let title;
+  let title
   switch (type) {
     case 'galaxy':
       title = chalkGalaxy(label)

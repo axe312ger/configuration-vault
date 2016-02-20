@@ -5,7 +5,7 @@
  * of from calling `fn` which each item of `list`
  */
 
-function collect(list, fn) {
+function collect (list, fn) {
   let allItems = []
 
   const sequence = list

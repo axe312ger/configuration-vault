@@ -3,7 +3,6 @@
 const fs = require('mz/fs')
 const inquirer = require('inquirer')
 const promisify = require('es6-promisify')
-const chalk = require('chalk')
 
 const galaxy = require('./universe/galaxy')
 const collect = require('./universe/sequential-reduce')
@@ -14,12 +13,7 @@ const prompt = promisify(inquirer.prompt, function (result) {
 })
 
 const showGalaxyPrompt = galaxy.showGalaxyPrompt
-const center = cliHelpers.center
-const hr = cliHelpers.hr
 const chalkGalaxy = cliHelpers.chalkGalaxy
-const chalkGroup = cliHelpers.chalkGroup
-const chalkPlanet = cliHelpers.chalkPlanet
-const newLine = cliHelpers.newLine
 const galaxyRegEx = /^galaxy-([\w-]+)\.json/
 const welcome = cliHelpers.welcome
 
@@ -75,6 +69,6 @@ fs
     console.log('TODO: Start install!')
   })
   .catch((error) => {
-    console.log('ERROR!!!');
-    console.error(error.stack);
+    console.log('ERROR!!!')
+    console.error(error.stack)
   })
