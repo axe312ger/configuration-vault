@@ -10,22 +10,10 @@ const prompt = promisify(inquirer.prompt, function (result) {
   this.resolve(result)
 })
 
-const chalkPlanet = cliHelpers.chalkPlanet;
-const hr = cliHelpers.hr;
-const newLine = cliHelpers.newLine;
+const preamble = cliHelpers.preamble;
 
 function showPlanetPrompt (planet) {
-  const preamble = [
-    newLine(3),
-    hr('-'),
-    `${chalk.bold('Installing the')} ${chalkPlanet(planet.label)} ${chalk.bold('planet')}`,
-    newLine(),
-    `${chalk.magenta('=>')} ${chalk.dim(planet.description)}`,
-    hr('-'),
-    newLine(),
-  ]
-
-  preamble.map((line) => console.log(line))
+  preamble('planet', planet.label, planet.description)
 
   const question = {
     type: 'confirm',

@@ -14,27 +14,16 @@ const prompt = promisify(inquirer.prompt, function (result) {
 })
 
 const showGalaxyPrompt = galaxy.showGalaxyPrompt
-const center = cliHelpers.center;
-const hr = cliHelpers.hr;
-const chalkGalaxy = cliHelpers.chalkGalaxy;
-const chalkGroup = cliHelpers.chalkGroup;
-const chalkPlanet = cliHelpers.chalkPlanet;
-const newLine = cliHelpers.newLine;
+const center = cliHelpers.center
+const hr = cliHelpers.hr
+const chalkGalaxy = cliHelpers.chalkGalaxy
+const chalkGroup = cliHelpers.chalkGroup
+const chalkPlanet = cliHelpers.chalkPlanet
+const newLine = cliHelpers.newLine
 const galaxyRegEx = /^galaxy-([\w-]+)\.json/
+const welcome = cliHelpers.welcome
 
-console.log(newLine(2))
-console.log(chalk.inverse(hr('#')))
-console.log(chalk.inverse(center('Welcome to the interactive universe installer')))
-console.log(chalk.inverse(hr('#')))
-console.log(newLine())
-console.log(`It will guide you though the installation process of several package manager ${chalkGalaxy('galaxies')}.`)
-console.log(`These contain ${chalkGroup('groups')} of ${chalkPlanet('planets')} which represents the packages to install.`)
-console.log('The universe has the following structure:')
-console.log(newLine())
-console.log('First we will gather all the packages to install, afterwards they are installed in one batch so you got time to grab a club mate')
-console.log(newLine(2))
-console.log(`So... No need to wait... Lets ${chalk.green('start')}.`)
-console.log(newLine(2))
+welcome()
 
 fs
   .readdir(process.cwd())

@@ -16,28 +16,21 @@ const chalkGroup = cliHelpers.chalkGroup;
 const chalkPlanet = cliHelpers.chalkPlanet;
 const hr = cliHelpers.hr;
 const newLine = cliHelpers.newLine;
+const preamble = cliHelpers.preamble;
 const showPlanetPrompt = planet.showPlanetPrompt
 
 function showGroupPrompt (group) {
-  const preamble = [
-    newLine(3),
-    hr('-'),
-    `${chalk.bold('Installing the')} ${chalkGroup(group.label)} ${chalk.bold('planet group')}`,
-    newLine(),
-    `${chalk.magenta('=>')} ${chalk.dim(group.description)}`,
-    hr('-'),
-    newLine(),
-    'The following planets are available in this group:',
-    newLine()
-  ]
+  preamble('group', group.label, group.description)
 
-  preamble.map((line) => console.log(line))
+  console.log(newLine())
+  console.log('The following planets are available in this group:')
+  console.log(newLine())
 
   const planets = group.planets
     .map((planet) => `* ${chalkPlanet(planet.label)}`)
     .map((listItem) => console.log(listItem))
 
-  console.log('')
+  console.log(newLine())
 
   const question = {
     type: 'list',

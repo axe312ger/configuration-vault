@@ -16,6 +16,7 @@ const chalkGalaxy = cliHelpers.chalkGalaxy;
 const chalkGroup = cliHelpers.chalkGroup;
 const hr = cliHelpers.hr;
 const newLine = cliHelpers.newLine;
+const preamble = cliHelpers.preamble;
 
 const showGroupPrompt = group.showGroupPrompt
 
@@ -29,25 +30,17 @@ function showGalaxyPrompt (galaxy) {
     }
   }
 
-  const preamble = [
-    newLine(),
-    hr('-'),
-    `${chalk.bold('Installing the')} ${chalkGalaxy(galaxy.label)} ${chalk.bold('universe')}`,
-    newLine(),
-    `${chalk.magenta('=>')} ${chalk.dim(galaxy.description)}`,
-    hr('-'),
-    newLine(),
-    'The following planet groups are available in this package:',
-    newLine()
-  ]
+  preamble('galaxy', galaxy.label, galaxy.description)
 
-  preamble.map((line) => console.log(line))
+  console.log(newLine())
+  console.log('The following planet groups are available in this package:')
+  console.log(newLine())
 
   const groups = galaxy.groups
     .map((group) => `* ${chalkGroup(group.label)}`)
     .map((listItem) => console.log(listItem))
 
-  console.log('')
+  console.log(newLine())
 
   const question = {
     type: 'list',
