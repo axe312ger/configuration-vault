@@ -2,12 +2,20 @@
 
 const inquirer = require('inquirer')
 const promisify = require('es6-promisify')
-const group = require('./group')
+const chalk = require('chalk')
+
+const cliHelpers = require('./cli-helpers')
 const collect = require('./sequential-reduce')
+const group = require('./group')
 
 const prompt = promisify(inquirer.prompt, function (result) {
   this.resolve(result)
 })
+
+const chalkGalaxy = cliHelpers.chalkGalaxy;
+const chalkGroup = cliHelpers.chalkGroup;
+const hr = cliHelpers.hr;
+const newLine = cliHelpers.newLine;
 
 const showGroupPrompt = group.showGroupPrompt
 
@@ -22,17 +30,21 @@ function showGalaxyPrompt (galaxy) {
   }
 
   const preamble = [
-    `Installing the ${galaxy.label}`,
-    '',
-    galaxy.description,
-    '',
-    'The following planet groups are available in this package:'
+    newLine(),
+    hr('-'),
+    `${chalk.bold('Installing the')} ${chalkGalaxy(galaxy.label)} ${chalk.bold('universe')}`,
+    newLine(),
+    `${chalk.magenta('=>')} ${chalk.dim(galaxy.description)}`,
+    hr('-'),
+    newLine(),
+    'The following planet groups are available in this package:',
+    newLine()
   ]
 
   preamble.map((line) => console.log(line))
 
   const groups = galaxy.groups
-    .map((group) => `* ${group.label}`)
+    .map((group) => `* ${chalkGroup(group.label)}`)
     .map((listItem) => console.log(listItem))
 
   console.log('')
@@ -45,15 +57,19 @@ function showGalaxyPrompt (galaxy) {
     choices: [
       {
         name: 'Install all planet groups',
-        value: 'all'
+        value: 'all',
+        short: chalkGroup('All groups')
       },
       {
         name: 'Install some planet groups',
         value: 'some'
+        ,
+        short: chalkGroup('Some groups')
       },
       {
         name: 'Install no planet groups at all',
-        value: 'none'
+        value: 'none',
+        short: chalkGroup('No groups at all')
       }
     ]
   }

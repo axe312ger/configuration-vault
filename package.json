@@ -4,8 +4,10 @@
   "description": "Opinionated but flexible configuration and dotfile vault",
   "main": "universe-installer.js",
   "dependencies": {
+    "chalk": "^1.1.1",
     "es6-promisify": "^3.0.0",
-    "inquirer": "^0.12.0"
+    "inquirer": "^0.12.0",
+    "mz": "^2.3.1"
   },
   "devDependencies": {},
   "scripts": {
