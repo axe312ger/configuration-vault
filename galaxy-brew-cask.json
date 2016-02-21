@@ -1,6 +1,10 @@
 {
   "label": "Brew Cask - DMG Package manager",
-  "command": "brew cask install ",
+  "command": "brew",
+  "parameters": [
+    "cask",
+    "install"
+  ],
   "description": "Homebrew Cask extends Homebrew and brings its elegance, simplicity, and speed to OS X applications and large binaries alike.",
   "groups": [
     {

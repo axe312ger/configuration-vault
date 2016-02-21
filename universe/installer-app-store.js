@@ -10,11 +10,16 @@ const inquirer = require('inquirer')
 const promisify = require('es6-promisify')
 const open = require('open')
 
-const ids = process.argv.slice(2)
+const cliHelpers = require('./cli-helpers')
 
 const prompt = promisify(inquirer.prompt, function (result) {
   this.resolve(result)
 })
+
+const chalkPlanet = cliHelpers.chalkPlanet
+const newLine = cliHelpers.newLine
+
+const ids = process.argv.slice(2)
 
 function annoyUser () {
   const messages = [
@@ -45,7 +50,9 @@ function annoyUser () {
 ids
   .reduce((previous, id) => {
     const nextItem = (previousItem) => {
-      console.log(`Installing app with id: ${id}`)
+      console.log(newLine(2))
+      console.log(`Installing app with id: ${chalkPlanet(id)}`)
+      console.log(newLine())
       open(`macappstores://itunes.apple.com/de/app/magnet/${id}`)
 
       return annoyUser()

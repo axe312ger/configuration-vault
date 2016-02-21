@@ -1,6 +1,9 @@
 {
   "label": "OSX App Store",
-  "command": "node universe/installer-app-store.js",
+  "command": "node",
+  "parameters": [
+    "universe/installer-app-store.js"
+  ],
   "description": "Some apps are only available via the App Store. This tries to solve this issue by opening up the App Store app by app. See him as guided wizard for the app store.",
   "groups": [
     {

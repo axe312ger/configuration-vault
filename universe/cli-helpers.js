@@ -1,13 +1,20 @@
 'use strict'
 
 const chalk = require('chalk')
+const punycode = require('punycode')
+const shellEscape = require('shell-escape')
 
 const maxColumns = 100
 const columns = process.stdout.columns > maxColumns ? maxColumns : process.stdout.columns
 
+function realLength (utf8Text) {
+  return punycode.ucs2.decode(utf8Text).length
+}
+
 function center (text) {
-  const prefixLength = Math.ceil((columns - text.length) / 2)
-  const postfixLength = columns - (prefixLength + text.length)
+  const textLength = realLength(text)
+  const prefixLength = Math.ceil((columns - textLength) / 2)
+  const postfixLength = columns - (prefixLength + textLength)
   const prefix = Array(prefixLength + 1).join(' ')
   const postfix = Array(postfixLength + 1).join(' ')
 
@@ -70,7 +77,7 @@ function description (text) {
   const chunks = words.reduce((lines, word) => {
     const line = lines.pop() || []
 
-    if (line.join(' ').length + word.length >= chunkLength) {
+    if (realLength(line.join(' ')) + realLength(word) >= chunkLength) {
       return [...lines, line, [word]]
     }
 
@@ -115,12 +122,32 @@ function displayInstallIntro () {
   console.log(newLine())
 }
 
-function displayProcessLog (log) {
+function displayInstallStart (title, command, args) {
+  const escapedCommand = shellEscape([command, ...args])
+
   console.log(newLine(2))
+  console.log(hr('#'))
+  console.log(`${chalk.bold('Starting with installation of')} ${chalkGalaxy(title)}`)
+  console.log(hr('#'))
+  console.log(newLine())
+  console.log(chalk.bold('Command:'))
+  console.log(escapedCommand)
+  console.log(newLine(2))
+  console.log(chalk.bold('Command log:'))
+  console.log(hr('-'))
+}
+
+function displayInstallEnd () {
+  console.log(newLine())
   console.log(hr('-'))
   console.log(newLine())
-  console.log(log)
-  console.log(hr('-'))
+}
+
+function displayInstallOutro () {
+  console.log(newLine())
+  console.log(hr('#'))
+  console.log(center('All installations finished❗️ We are done here ❤️'))
+  console.log(hr('#'))
   console.log(newLine(2))
 }
 
@@ -135,5 +162,7 @@ module.exports = {
   displayWelcome,
   displayNothingToDo,
   displayInstallIntro,
-  displayProcessLog
+  displayInstallStart,
+  displayInstallEnd,
+  displayInstallOutro
 }

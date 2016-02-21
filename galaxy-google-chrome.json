@@ -1,6 +1,10 @@
 {
   "label": "Google Chrome browser extensions",
-  "command": "node universe/installer-browser.js 'Google Chrome'",
+  "command": "node",
+  "parameters": [
+    "universe/installer-browser.js",
+    "Google Chrome"
+  ],
   "description": "Opens a tab in Chrome for every selected extension",
   "groups": [
     {
