@@ -1,0 +1,23 @@
+{
+  "label": "OSX App Store",
+  "command": "node universe/installer-app-store.js",
+  "description": "Some apps are only available via the App Store. This tries to solve this issue by opening up the App Store app by app. See him as guided wizard for the app store.",
+  "groups": [
+    {
+      "label": "Essentials",
+      "description": "You won't live without these!",
+      "planets": [
+        {
+          "id": "id441258766",
+          "label": "Magnet",
+          "description": "Every time you want to copy content from one app to the other, compare files side by side or multitask in any other way, you need all the windows arranged accordingly. Magnet makes this process clean and simple."
+        },
+        {
+          "id": "id1026349850",
+          "label": "Copied – Copy and Paste Everywhere",
+          "description": "Copied is a full featured clipboard manager. Save text, links, and images that you’ve copied to your clipboard from any app. Quickly access your saved clippings from the menubar and copy them back to your clipboard in its original format or in a variety of different formats using templates."
+        }
+      ]
+    }
+  ]
+}

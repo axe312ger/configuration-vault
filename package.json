@@ -7,7 +7,8 @@
     "chalk": "^1.1.1",
     "es6-promisify": "^3.0.0",
     "inquirer": "^0.12.0",
-    "mz": "^2.3.1"
+    "mz": "^2.3.1",
+    "open": "0.0.5"
   },
   "devDependencies": {
     "eslint": "^2.2.0",
