@@ -82,7 +82,7 @@ function description (text) {
     .reduce((output, line) => `${output}${chalk.magenta(prefix)}${chalk.dim(line)}\n`, '')
 }
 
-function welcome () {
+function displayWelcome () {
   console.log(newLine(2))
   console.log(chalk.inverse(hr('#')))
   console.log(chalk.inverse(center('Welcome to the interactive universe installer')))
@@ -98,6 +98,32 @@ function welcome () {
   console.log(newLine(2))
 }
 
+function displayNothingToDo () {
+  console.log(newLine(2))
+  console.log(chalk.inverse(hr('#')))
+  console.log(chalk.inverse(center('No packages selected. There is nothing to do.')))
+  console.log(chalk.inverse(hr('#')))
+}
+
+function displayInstallIntro () {
+  console.log(newLine(2))
+  console.log(chalk.inverse(hr('#')))
+  console.log(chalk.inverse(center('Ready! Installation process is starting. Grab a coffee or club mate!')))
+  console.log(chalk.inverse(hr('#')))
+  console.log(newLine(2))
+  console.log('Following commands will be executed:')
+  console.log(newLine())
+}
+
+function displayProcessLog (log) {
+  console.log(newLine(2))
+  console.log(hr('-'))
+  console.log(newLine())
+  console.log(log)
+  console.log(hr('-'))
+  console.log(newLine(2))
+}
+
 module.exports = {
   center,
   chalkGalaxy,
@@ -106,5 +132,8 @@ module.exports = {
   hr,
   newLine,
   preamble,
-  welcome
+  displayWelcome,
+  displayNothingToDo,
+  displayInstallIntro,
+  displayProcessLog
 }

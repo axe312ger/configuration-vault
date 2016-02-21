@@ -9,6 +9,7 @@ const prompt = promisify(inquirer.prompt, function (result) {
   this.resolve(result)
 })
 
+const chalkPlanet = cliHelpers.chalkPlanet
 const preamble = cliHelpers.preamble
 
 function showPlanetPrompt (planet) {
@@ -17,7 +18,7 @@ function showPlanetPrompt (planet) {
   const question = {
     type: 'confirm',
     name: 'planet',
-    message: `Install ${planet.label}`,
+    message: `Install ${chalkPlanet(planet.label)}`,
     default: true
   }
 

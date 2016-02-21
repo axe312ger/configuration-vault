@@ -15,18 +15,21 @@ const prompt = promisify(inquirer.prompt, function (result) {
 })
 
 const showGalaxyPrompt = galaxy.showGalaxyPrompt
-const chalkGalaxy = cliHelpers.chalkGalaxy
 const galaxyRegEx = /^galaxy-([\w-]+)\.json/
-const hr = cliHelpers.hr
+
+const chalkGalaxy = cliHelpers.chalkGalaxy
+const displayProcessLog = cliHelpers.displayProcessLog
+const displayWelcome = cliHelpers.displayWelcome
+const displayNothingToDo = cliHelpers.displayNothingToDo
+const displayInstallIntro = cliHelpers.displayInstallIntro
 const newLine = cliHelpers.newLine
-const welcome = cliHelpers.welcome
 
 function installFailed (error) {
   console.error('Failed to install:')
   console.error(error, error.stack)
 }
 
-welcome()
+displayWelcome()
 
 fs
   .readdir(process.cwd())
@@ -73,13 +76,15 @@ fs
     return collect(galaxyConfigs, showGalaxyPrompt)
   })
   .then((galaxies) => {
-    console.log(newLine(2))
-    console.log(hr('#'))
-    console.log('Ready! Installation process is starting. Grab a coffee or club mate!')
-    console.log(hr('#'))
-    console.log(newLine(2))
-    console.log('Following commands will be executed:')
-    console.log(newLine())
+    return galaxies.filter((galaxy) => galaxy.planets.length)
+  })
+  .then((galaxies) => {
+    if (!galaxies.length) {
+      displayNothingToDo()
+      return
+    }
+
+    displayInstallIntro()
 
     const installations = galaxies
       .map((galaxy) => {
@@ -93,12 +98,7 @@ fs
       .map((installation) => {
         return installation
           .then((stdout) => {
-            console.log(newLine(2))
-            console.log(hr('-'))
-            console.log(newLine())
-            console.log(stdout.join('\n'))
-            console.log(hr('-'))
-            console.log(newLine(2))
+            displayProcessLog(stdout.join('\n'))
           })
           .catch(installFailed)
       })
