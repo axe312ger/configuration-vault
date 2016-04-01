@@ -54,6 +54,11 @@
           "description": "Best terminal for OSX so far. I promise!"
         },
         {
+          "id": "macdown",
+          "label": "MacDown",
+          "description": "Write Markdown with ease. Includes the Github stylesheet :)"
+        },
+        {
           "id": "sublime-text3",
           "label": "Sublime Text 3",
           "description": "I am wondering, why this is not in the essentials category!?"
