@@ -33,7 +33,7 @@ function installFailed (error) {
 displayWelcome()
 
 fs
-  .readdir(process.cwd())
+  .readdir(`${process.cwd()}/galaxies`)
   .catch((err) => {
     console.err(err)
   })
@@ -45,7 +45,7 @@ fs
         const name = matchResult[1]
         const file = matchResult[0]
 
-        galaxies[name] = require(`./${file}`)
+        galaxies[name] = require(`./galaxies/${file}`)
 
         return galaxies
       }, {})

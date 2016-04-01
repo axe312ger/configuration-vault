@@ -1,9 +1,9 @@
 [submodule ".zsh/submodules/z"]
-	path = .zsh/submodules/z
+	path = zsh/submodules/z
 	url = https://github.com/rupa/z.git
 [submodule ".zsh/submodules/bullet-train-oh-my-zsh-theme"]
-	path = .zsh/submodules/bullet-train-oh-my-zsh-theme
+	path = zsh/submodules/bullet-train-oh-my-zsh-theme
 	url = https://github.com/caiogondim/bullet-train-oh-my-zsh-theme.git
 [submodule ".zsh/submodules/zsh-autosuggestions"]
-	path = .zsh/submodules/zsh-autosuggestions
+	path = zsh/submodules/zsh-autosuggestions
 	url = git://github.com/tarruda/zsh-autosuggestions
