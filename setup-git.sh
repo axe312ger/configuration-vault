@@ -6,5 +6,5 @@ mv ~/.gitconfig ~/.gitconfig.bak
 mv ~/.gitignore_global ~/.gitignore_global.bak
 
 cd ~
-ln -s $CWD/.gitconfig .gitconfig
-ln -s $CWD/.gitignore_global .gitignore_global
+ln -s "$CWD/.gitconfig" .gitconfig
+ln -s "$CWD/.gitignore_global" .gitignore_global

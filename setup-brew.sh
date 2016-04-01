@@ -30,3 +30,7 @@ brew install diff-so-fancy #https://github.com/so-fancy/diff-so-fancy
 # Image & video manipulation
 brew install graphicsmagick
 brew install ffmpeg --with-libvpx
+
+# Brew Cask
+brew tap caskroom/cask
+brew tap caskroom/versions
