@@ -14,7 +14,7 @@ export EDITOR='subl -w'
 . "$CONFIG_VAULT_PATH/.zsh_aliases"
 
 
-## Zsh Extensions
+## ZSH Extensions
 ############################################################
 
 # z - cd is lame - https://github.com/rupa/z
@@ -25,6 +25,10 @@ export EDITOR='subl -w'
 
 # scmpuff - https://mroth.github.io/scmpuff/
 eval "$(scmpuff init -s)"
+
+## Custom binary path
+############################################################
+export PATH="$PATH:`echo ~`/bin"
 
 ## Package Managers
 ############################################################

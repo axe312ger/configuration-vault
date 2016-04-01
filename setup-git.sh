@@ -8,3 +8,6 @@ mv ~/.gitignore_global ~/.gitignore_global.bak
 cd ~
 ln -s "$CWD/.gitconfig" .gitconfig
 ln -s "$CWD/.gitignore_global" .gitignore_global
+
+# Install diff-highlight script
+curl https://raw.githubusercontent.com/git/git/master/contrib/diff-highlight/diff-highlight > ~/bin/diff-highlight && chmod +x ~/bin/diff-highlight

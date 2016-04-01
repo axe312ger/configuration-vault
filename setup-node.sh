@@ -19,4 +19,4 @@ else
   nvm install stable
 fi
 
-npm install -g babel-core eslint git-stats knex npm-check-updates wifi-password
+npm install -g babel-core diff-so-fancy eslint git-stats knex npm-check-updates wifi-password

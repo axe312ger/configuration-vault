@@ -3,7 +3,7 @@ alias ls='ls -lisah'
 alias rm='trash'
 
 # Git
-alias ga='git add -p'
+alias gadd='git add -p'
 alias gc='git commit'
 alias gr='git checkout -p --'
 
