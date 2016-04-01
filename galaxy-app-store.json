@@ -19,6 +19,11 @@
           "id": "id1026349850",
           "label": "Copied – Copy and Paste Everywhere",
           "description": "Copied is a full featured clipboard manager. Save text, links, and images that you’ve copied to your clipboard from any app. Quickly access your saved clippings from the menubar and copy them back to your clipboard in its original format or in a variety of different formats using templates."
+        },
+        {
+          "id": "id411246225",
+          "label": "Caffeine",
+          "description": "Give your Mac some coffee. Will prevent your machine to automatically start to sleep after a while. Very useful in meetings or while listening to music online."
         }
       ]
     }

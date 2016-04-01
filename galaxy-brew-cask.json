@@ -17,6 +17,17 @@
           "description": "Password manager #1"
         },
         {
+          "id": "alfred",
+          "label": "Alfred 2",
+          "description": "The #1 spotlight search replacement is back with version 2!"
+        }
+      ]
+    },
+    {
+      "label": "Browsers",
+      "description": "Connect to the outta space",
+      "planets": [
+        {
           "id": "google-chrome",
           "label": "Google Chrome (Stable)",
           "description": "Fastest and most modern browser out there."
@@ -25,6 +36,16 @@
           "id": "google-chrome-beta",
           "label": "Google Chrome (Beta)",
           "description": "Fastest and most modern browser out there. The beta, for the magpies under you guys."
+        },
+        {
+          "id": "firefox",
+          "label": "Firefox (Stable)",
+          "description": "Mozillas flagship browser."
+        },
+        {
+          "id": "opera",
+          "label": "Opera (Stable)",
+          "description": "The opera browser. No body uses it, but it is installed on many embedded devices."
         }
       ]
     },
@@ -99,6 +120,11 @@
           "id": "flux",
           "label": "Flux",
           "description": "Dimms your screen at night time to avoid bleeding eyes."
+        },
+        {
+          "id": "licecap",
+          "label": "LICEcap",
+          "description": "Capture your screen as animated gif. Unbelievable useful."
         }
       ]
     }

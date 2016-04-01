@@ -38,11 +38,6 @@
       "description": "Isn't that the reason, most of us use this fancy thing called internet?",
       "planets": [
         {
-          "id": "https://chrome.google.com/webstore/detail/cryptocat/gonbigodpnfghidmnphnadhepmbabhij",
-          "label": "Cryptocat",
-          "description": "**Very** secure chatting browser extension. Uses the [OTR cryptographic protocol](https://en.wikipedia.org/wiki/Off-the-Record_Messaging) which is one of the strongest text encryption methods we know so far. Also available for other platforms. Get more details at the [cryptocat website](https://crypto.cat/)."
-        },
-        {
           "id": "https://chrome.google.com/webstore/detail/appearin-screen-sharing/bodncoafpihbhpfljcaofnebjkaiaiga",
           "label": "Appear.in Screen Sharing",
           "description": "If you don't know [appear.in](htts://appear.in): This is an awesome alternative to Skype, Google Hangout etc. No account needed, just share the link with your partner and start video chatting."
