@@ -1,0 +1,10 @@
+{
+  "label": "Node.js",
+  "command": "npm",
+  "parameters": [
+    "install",
+    "-g"
+  ],
+  "description": "Install node packages globally.",
+  "groups": []
+}

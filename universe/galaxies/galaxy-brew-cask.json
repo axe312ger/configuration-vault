@@ -1,0 +1,132 @@
+{
+  "label": "Brew Cask - DMG Package manager",
+  "command": "brew",
+  "parameters": [
+    "cask",
+    "install"
+  ],
+  "description": "Homebrew Cask extends Homebrew and brings its elegance, simplicity, and speed to OS X applications and large binaries alike.",
+  "groups": [
+    {
+      "label": "Essentials",
+      "description": "You won't live without these!",
+      "planets": [
+        {
+          "id": "1password",
+          "label": "1Password",
+          "description": "Password manager #1"
+        },
+        {
+          "id": "alfred",
+          "label": "Alfred 2",
+          "description": "The #1 spotlight search replacement is back with version 2!"
+        }
+      ]
+    },
+    {
+      "label": "Browsers",
+      "description": "Connect to the outta space",
+      "planets": [
+        {
+          "id": "google-chrome",
+          "label": "Google Chrome (Stable)",
+          "description": "Fastest and most modern browser out there."
+        },
+        {
+          "id": "google-chrome-beta",
+          "label": "Google Chrome (Beta)",
+          "description": "Fastest and most modern browser out there. The beta, for the magpies under you guys."
+        },
+        {
+          "id": "firefox",
+          "label": "Firefox (Stable)",
+          "description": "Mozillas flagship browser."
+        },
+        {
+          "id": "opera",
+          "label": "Opera (Stable)",
+          "description": "The opera browser. No body uses it, but it is installed on many embedded devices."
+        }
+      ]
+    },
+    {
+      "label": "Communication",
+      "description": "You gotta talk!",
+      "planets": [
+        {
+          "id": "slack",
+          "label": "Slack",
+          "description": "Do we need to talk about this?"
+        },
+        {
+          "id": "gpgtools",
+          "label": "GPG Tools",
+          "description": "You gotta encrypt, luke!"
+        }
+      ]
+    },
+    {
+      "label": "Development",
+      "description": "You gotta code!",
+      "planets": [
+        {
+          "id": "iterm2",
+          "label": "iTerm 2",
+          "description": "Best terminal for OSX so far. I promise!"
+        },
+        {
+          "id": "macdown",
+          "label": "MacDown",
+          "description": "Write Markdown with ease. Includes the Github stylesheet :)"
+        },
+        {
+          "id": "sublime-text3",
+          "label": "Sublime Text 3",
+          "description": "I am wondering, why this is not in the essentials category!?"
+        },
+        {
+          "id": "chrome-devtools",
+          "label": "Chrome Devtools",
+          "description": "Keep the devtools external. Very helpful."
+        },
+        {
+          "id": "psequel",
+          "label": "PSequel",
+          "description": "Database GUI for PostgresQL"
+        },
+        {
+          "id": "sequel-pro",
+          "label": "Sequel Pro",
+          "description": "Database GUI for MySQL & MariaDB"
+        }
+      ]
+    },
+    {
+      "label": "System Tools",
+      "description": "Keep your mac fast and clean!",
+      "planets": [
+        {
+          "id": "disk-inventory-x",
+          "label": "Disk Inventory X",
+          "description": "See what is taking so much space on your hard drive"
+        }
+      ]
+    },
+    {
+      "label": "Peace of mind",
+      "description": "Little helpers which make your life more valueable. I promise!",
+      "planets": [
+        {
+          "id": "flux",
+          "label": "Flux",
+          "description": "Dimms your screen at night time to avoid bleeding eyes."
+        },
+        {
+          "id": "licecap",
+          "label": "LICEcap",
+          "description": "Capture your screen as animated gif. Unbelievable useful."
+        }
+      ]
+    }
+  ]
+}
