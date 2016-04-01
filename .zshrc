@@ -29,20 +29,3 @@ eval "$(scmpuff init -s)"
 ## Custom binary path
 ############################################################
 export PATH="$PATH:`echo ~`/bin"
-
-## Package Managers
-############################################################
-
-# Node Version Manager
-export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
-
-nvm use stable
-
-# Ruby Version Manager
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# PHP & Composer
-alias composer='php /usr/local/bin/composer'
-export PATH="$PATH:$HOME/.composer/vendor/bin"
-export PATH="$PATH:$HOME/usr/local/opt/php56/bin"
