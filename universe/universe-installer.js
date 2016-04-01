@@ -5,9 +5,9 @@ const child_process = require('child_process')
 const inquirer = require('inquirer')
 const promisify = require('es6-promisify')
 
-const galaxy = require('./universe/galaxy')
-const collect = require('./universe/sequential-reduce')
-const cliHelpers = require('./universe/cli-helpers')
+const galaxy = require('./galaxy')
+const collect = require('./sequential-reduce')
+const cliHelpers = require('./cli-helpers')
 
 const spawn = child_process.spawn
 const prompt = promisify(inquirer.prompt, function (result) {
@@ -33,7 +33,7 @@ function installFailed (error) {
 displayWelcome()
 
 fs
-  .readdir(`${process.cwd()}/galaxies`)
+  .readdir(`${__dirname}/galaxies`)
   .catch((err) => {
     console.err(err)
   })

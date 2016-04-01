@@ -2,4 +2,4 @@
 
 npm install
 
-node universe-installer.js
+node universe/universe-installer.js
