@@ -43,6 +43,59 @@
           "description": "You gotta encrypt, luke!"
         }
       ]
+    },
+    {
+      "label": "Development",
+      "description": "You gotta code!",
+      "planets": [
+        {
+          "id": "iterm2",
+          "label": "iTerm 2",
+          "description": "Best terminal for OSX so far. I promise!"
+        },
+        {
+          "id": "sublime-text3",
+          "label": "Sublime Text 3",
+          "description": "I am wondering, why this is not in the essentials category!?"
+        },
+        {
+          "id": "chrome-devtools",
+          "label": "Chrome Devtools",
+          "description": "Keep the devtools external. Very helpful."
+        },
+        {
+          "id": "psequel",
+          "label": "PSequel",
+          "description": "Database GUI for PostgresQL"
+        },
+        {
+          "id": "sequel-pro",
+          "label": "Sequel Pro",
+          "description": "Database GUI for MySQL & MariaDB"
+        }
+      ]
+    },
+    {
+      "label": "System Tools",
+      "description": "Keep your mac fast and clean!",
+      "planets": [
+        {
+          "id": "disk-inventory-x",
+          "label": "Disk Inventory X",
+          "description": "See what is taking so much space on your hard drive"
+        }
+      ]
+    },
+    {
+      "label": "Peace of mind",
+      "description": "Little helpers which make your life more valueable. I promise!",
+      "planets": [
+        {
+          "id": "flux",
+          "label": "Flux",
+          "description": "Dimms your screen at night time to avoid bleeding eyes."
+        }
+      ]
     }
   ]
 }
