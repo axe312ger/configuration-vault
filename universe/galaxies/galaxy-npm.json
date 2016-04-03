@@ -1,11 +1,11 @@
 {
-  "label": "Node.js",
+  "label": "NPM",
   "command": "npm",
   "parameters": [
     "install",
     "-g"
   ],
-  "description": "Install node packages globally.",
+  "description": "Install javascript packages globally.",
   "groups": [
     {
       "label": "Project Housekeeping",
