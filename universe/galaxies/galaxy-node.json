@@ -6,5 +6,49 @@
     "-g"
   ],
   "description": "Install node packages globally.",
-  "groups": []
+  "groups": [
+    {
+      "label": "Project Housekeeping",
+      "description": "Keep your projects solid and up to date.",
+      "planets": [
+        {
+          "id": "npm-check-updates",
+          "label": "npm-check-updates",
+          "description": "Run `$ npm-check-updates` to see all available updates for your current project. Can also update the package.json automatically."
+        }
+      ]
+    },
+    {
+      "label": "Coding & Coding style",
+      "description": "Keep your code clean!",
+      "planets": [
+        {
+          "id": "eslint",
+          "label": "eslint - the most modern js linter so far",
+          "description": "A pluggable javascript linter, 100% unopinionated and can't wait to parse and apply your ruleset - http://eslint.org/"
+        },
+        {
+          "id": "knex",
+          "label": "Knex.js",
+          "description": "Popular SQL query builder for Postgres, MySQL, MariaDB, SQLite3, and Oracle designed to be flexible, portable, and fun to use. - http://knexjs.org/"
+        },
+        {
+          "id": "babel-cli",
+          "label": "Babel (cli)",
+          "description": "To use Babel 6, the babel-cli package should be installed globally - https://babeljs.io/"
+        }
+      ]
+    },
+    {
+      "label": "Peace of mind",
+      "description": "Little helpers which make your life more valueable. I promise!",
+      "planets": [
+        {
+          "id": "wifi-password",
+          "label": "WiFi Password",
+          "description": "Run `$ wifi-password` to display the password of the WiFi, you are currently connected to."
+        }
+      ]
+    }
+  ]
 }
