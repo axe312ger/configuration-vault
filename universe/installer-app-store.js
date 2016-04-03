@@ -49,7 +49,7 @@ function annoyUser () {
 
 ids
   .reduce((previous, id) => {
-    const nextItem = (previousItem) => {
+    const nextItem = () => {
       console.log(newLine(2))
       console.log(`Installing app with id: ${chalkPlanet(id)}`)
       console.log(newLine())
