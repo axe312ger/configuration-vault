@@ -20,6 +20,11 @@
           "id": "alfred",
           "label": "Alfred 2",
           "description": "The #1 spotlight search replacement is back with version 2!"
+        },
+        {
+          "id": "clipmenu",
+          "label": "ClipMenu",
+          "description": "Very simple but effective clipboard history tool. Good free alternative to Copied from the app store galaxy - http://www.clipmenu.com/"
         }
       ]
     },

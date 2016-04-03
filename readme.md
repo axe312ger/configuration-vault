@@ -45,6 +45,8 @@ It basically collects package names by user interaction and runs the correspondi
 
 **@ToDo:** Add screen capture gif
 
+## Specific software hints
+
 ### Configure iTerm
 
 > Here we need to do some stuff manually, luckily the config contains almost everything you need.
@@ -55,6 +57,11 @@ It basically collects package names by user interaction and runs the correspondi
 4. Select `Load preferences from a custom folder or URL:
 5. Click `Browse` and select the `iTerm` folder within this repo.
 6. Install the `Sauce Code Pro` font, it is located within the `iTerm` folder.
+
+### Configure Sublime Text
+
+1. Install Package Control -> <https://packagecontrol.io/installation>
+2. Install your packages. Automatism is coming soon!
 
 ## License
 
