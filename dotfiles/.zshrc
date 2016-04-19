@@ -13,6 +13,19 @@ export EDITOR='subl -w'
 # Aliases
 . "$CONFIG_VAULT_PATH/dotfiles/.zsh_aliases"
 
+## Bullet Train oh my zsh theme configuration
+############################################################
+BULLETTRAIN_NVM_SHOW=true
+BULLETTRAIN_EXEC_TIME_SHOW=true
+
+BULLETTRAIN_GIT_PROMPT_CMD="\$(custom_git_prompt)"
+
+custom_git_prompt() {
+  prompt=$(git_prompt_info)
+  prompt=${prompt//\//\ \ }
+  prompt=${prompt//_/\ }
+  echo ${prompt}
+}
 
 ## ZSH Extensions
 ############################################################
