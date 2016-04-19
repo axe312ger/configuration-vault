@@ -3,7 +3,7 @@
   email = info@benedikt-roetsch.de
 
 [core]
-  excludesfile = ~/dotfiles/.gitignore
+  excludesfile = ~/.gitignore
 
   # Configure Git on OS X to properly handle line endings
   autocrlf = input
